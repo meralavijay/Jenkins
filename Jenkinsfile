@@ -13,8 +13,8 @@ pipeline
          steps
           {
             powershell label: '', script: '''$servicestatus = get-service -name ${env:Servicename}
-            script: '''$servicestatus = get-service -name ${env:service}
-            write-host "The Status of the ${env:Servicename} is $($servicestatus.Status) 
+            $servicestatus = get-service -name ${env:service}
+            write-host "The Status of the ${env:Servicename} is $($servicestatus.Status)" 
             write-host "The Status from the input  ${env:Service} is $($servicestatus.Status) "'''
          }
        }
