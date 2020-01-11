@@ -19,7 +19,9 @@ pipeline
            }
            else
            {
-           powershell label: '', script: 'stop-service -name ${env:Servicename}'
+           powershell label: '', script: '''$Servicestat=get-Service -name ${env:Servicename}
+             start-service -name ${env:Servicename}
+             write-host "The service Status is $($Servicestat.Staus)"'''
            }
            }
 }
