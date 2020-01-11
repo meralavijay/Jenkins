@@ -11,16 +11,16 @@ pipeline
          {
           if ($servicestatus == "stopped")
            {    
-            powershell label: '', script: 'stop-service -name ${env:Servicename}'
+            powershell label: '', script: 'start-service -name ${env:Servicename}'
            }
            else ($servicestaus == "running")
            {
-           powershell label: '', script: 'start-service -name ${env:Servicename}'
+           powershell label: '', script: 'stop-service -name ${env:Servicename}'
            }
 }
             
          }
        }
-     }
+     
 
 }
