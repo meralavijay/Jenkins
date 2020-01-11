@@ -8,12 +8,14 @@ pipeline
          input 
          { 
            message "Waiting for Approval"
-         }
+           parameters {name:Service,description:This is param from input}
          steps
           {
             powershell label: '', script: '''$servicestatus = get-service -name ${env:Servicename}
-            write-host "The Status of the ${env:Servicename} is $($servicestatus.Status) "'''
+            write-host "The Status of the ${env:Servicename} is $($servicestatus.Status) "
+            write-host "The Status from the input  ${env:Service} is $($servicestatus.Status) "'''
           }
+         }
        }
      }
 
