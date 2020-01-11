@@ -15,7 +15,7 @@ pipeline
            {    
              powershell label: '', script: '''$Servicestat=get-Service -name ${env:Servicename}
              stop-service -name ${env:Servicename}
-             write-host "The service Status is $($Servicestat.Staus)"'''
+             write-host "The service Status is $($Servicestat.Status)"'''
            }
            else
            {
