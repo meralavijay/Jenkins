@@ -8,7 +8,7 @@ pipeline
          input 
          { 
            message "Waiting for Approval"
-           parameters {name:Service,description:This is param from input}
+           parameters {string (name:Service,description:This is param from input)}
          steps
           {
             powershell label: '', script: '''$servicestatus = get-service -name ${env:Servicename}
