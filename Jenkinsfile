@@ -7,7 +7,7 @@ pipeline
        {
          input 
          { 
-           'Waiting for Approval'
+           message "Waiting for Approval"
          }
          steps
           {
