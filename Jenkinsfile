@@ -5,7 +5,10 @@ pipeline
      {
      stage ("Servicestatus")
        {
-         input 'Waiting for Approval'
+         input 
+         { 
+           'Waiting for Approval'
+         }
          steps
           {
             powershell label: '', script: '''$servicestatus = get-service -name ${env:Servicename}
