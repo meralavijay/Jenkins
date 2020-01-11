@@ -1,10 +1,10 @@
-Pipeline
+pipeline
 {
-  Stages
+  stages
      {
-     Stage ("Stage1")
+     stage ("Stage1")
        {
-         Steps
+         steps
           {
            powershell 'write-output "This is first stage"'
           }
