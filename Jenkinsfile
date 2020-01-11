@@ -13,9 +13,9 @@ pipeline
              {
                  if (env.servicestatus == "stopped")
            {    
-             powershell label: '', script: '''$ServiceStat=get-Service -name ${env:Servicename}
+             powershell label: '', script: '''$Servicestat=get-Service -name ${env:Servicename}
              stop-service -name ${env:Servicename}
-             write-host "The service Status is $($ServiceStat.Staus)"'''
+             write-host "The service Status is $($Servicestat.Staus)"'''
            }
            else
            {
