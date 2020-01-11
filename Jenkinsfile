@@ -9,13 +9,16 @@ pipeline
          
          steps
          {
-          if ($servicestatus == "stopped")
+           script
+           {
+                 if ($servicestatus == "stopped")
            {    
             powershell label: '', script: 'start-service -name ${env:Servicename}'
            }
            else ($servicestaus == "running")
            {
            powershell label: '', script: 'stop-service -name ${env:Servicename}'
+           }
            }
 }
             
