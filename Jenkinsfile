@@ -1,6 +1,7 @@
 pipeline
 {
   agent any
+  parameters {string (name:'service',description:'This is param from input')}
   stages
      {
      stage ("Servicestatus")
@@ -8,7 +9,7 @@ pipeline
          input 
          { 
            message "Waiting for Approval"
-           parameters {string (name:'service',description:'This is param from input')}
+           
          }
          steps
           {
