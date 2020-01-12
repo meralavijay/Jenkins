@@ -24,7 +24,7 @@ pipeline
        {
            steps    
                {
-               powershell label: '', script: 'New-Item -itemtype file -Path $($Path)'
+               powershell label: '', script: 'New-Item -itemtype file -Path C:\\Demo1\$($Path)'
              } 
        }
        stage ("Deletefile")
