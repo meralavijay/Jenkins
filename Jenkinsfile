@@ -13,7 +13,7 @@ pipeline
              }
          steps    
                {
-               powershell label: '', script: 'Get-Service | Export-Csv -Path C:\\Demo1\Services.csv'
+               powershell label: '', script: 'Get-Service | Export-Csv -Path C:\\Demo1\\Services.csv'
              }
           steps    
                {
