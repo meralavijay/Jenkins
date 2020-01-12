@@ -4,21 +4,31 @@ pipeline
   parameters {string (name:'Path',description:'Input File name')}
   stages
      {
-     stage ("ServiceExport")
+     stage ("CreateFolder")
        {
          
          steps
              {
                powershell label: '', script: 'New-Item -Path C:\\Demo1'
              }
+       }
+       
+       stage ("Exportcsv")
+       {
          steps    
                {
                powershell label: '', script: 'Get-Service | Export-Csv -Path C:\\Demo1\\Services.csv'
              }
-          steps    
+     }
+        stage ("Customfilename")
+       {
+           steps    
                {
                powershell label: '', script: 'New-Item -Path $($Path)'
-             }   
+             } 
+       }
+       stage ("Customfilename")
+       {
            steps    
                {
                powershell label: '', script: 'Remove-Item -Path C:\\Demo1\\Services.csv'
