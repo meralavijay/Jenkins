@@ -8,7 +8,7 @@ pipeline
          steps
           {
            echo "This is first stage"
-            echo ipconfig
+            echo "ipconfig"
           }
        }
      }
