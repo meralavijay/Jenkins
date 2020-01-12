@@ -1,7 +1,7 @@
 pipeline
 {
   agent any
-  parameters {string (name:'Path',description:'Input File name')}
+  parameters {string (name:'Pathadd',description:'Input File name')}
   stages
      {
      stage ("CreateFolder")
@@ -24,7 +24,7 @@ pipeline
        {
            steps    
                {
-               powershell label: '', script: 'New-Item -Path C:\\Demo1\$(env:Path)'
+               powershell label: '', script: 'New-Item -Path C:\\Demo1\$(env:Pathadd)'
              } 
        }
        stage ("Deletefile")
