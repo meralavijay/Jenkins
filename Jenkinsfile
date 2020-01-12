@@ -27,7 +27,7 @@ pipeline
                powershell label: '', script: 'New-Item -Path $($Path)'
              } 
        }
-       stage ("Customfilename")
+       stage ("Deletefile")
        {
            steps    
                {
