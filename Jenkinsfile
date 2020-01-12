@@ -9,7 +9,7 @@ pipeline
          
          steps
              {
-               powershell label: '', script: 'New-Item -Path C:\\Demo1'
+               powershell label: '', script: 'New-Item -ItemType directory -Path C:\\Demo1'
              }
        }
        
