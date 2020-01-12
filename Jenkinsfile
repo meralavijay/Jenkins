@@ -7,7 +7,7 @@ pipeline
        {
          steps
           {
-           powershell 'write-output "This is first stage"'
+           echo "This is first stage"'
           }
        }
      }
