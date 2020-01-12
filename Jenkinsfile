@@ -1,6 +1,6 @@
 pipeline
 {
-  agent {label 'windows'}
+  agent {label 'Windows'}
   stages
      {
      stage ("Stage1")
